@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient( to left bottom ,#0001,#0000),url("img's/bg155.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-color: #f1f1f1; */
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            transition: filter 0.5s linear;
+        }
+        .form-container {
+            background-color: #ffffff54;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 300px;
+            margin: 0 10px;
+            height: 480px; 
+        }
+        .form-container:hover{
+            transition: all linear .4s;
+           transform: scale(1.1);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.39);
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group p{
+            font-size: 13px;
+
+        }
+        .form-group  .s-link{
+            text-decoration-color: #444444;
+            text-decoration-style: double;
+            color: #ff0000;
+        }
+        .form-group  .s-link:active{
+            color: blue;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #46454516;
+            border: 1px solid #aba7a7;
+            border-radius: 5px;
+        }
+        
+        .submit-button {
+            background-color: #000000;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        .submit-button:hover {
+            /*background-color: #45a049;*/
+            background-color: rgba(0, 26, 255, 0.842);
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        
+            .form-container {
+                width: 100%;
+                margin: 10px 0;
+            }
+        
+            .social-login {
+                flex-direction: column;
+            }
+        
+            .google-button,
+            .facebook-button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Login</h1>
+            </div>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Login</button>
+                </div>
+                <div class="form-group">
+                    <p>Don't have an account? <a class="s-link" href="#signup">Sign Up</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Sign Up</h1>
+            </div>
+            <form action="#" method="post" id="signup">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="submit-button">Sign Up</button>
+                </div>
+                <div class="form-group">
+                    <p>Already have an account? <a class="s-link" href="#login">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="back">
+        <a href="index.html">Back to Home</a>
+    </div>
+    <style>
+        .back{
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            
+            transform: translate(-50%,-50%);
+            
+        }
+        .back a{
+        display: inline-block;
+        padding: 0.65em 1.6em;
+        border: 1px solid #ffffff;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        box-sizing: border-box;
+        text-decoration: none;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        border-radius: 1px 20px;
+        color: #ffffff;
+        text-align: center;
+        transition: all 0.2s;
+        animation: bn13bouncy 5s infinite linear;
+        position: relative;
+        background-image: linear-gradient(
+            57deg,
+            #000000,
+            #020c1e,
+            #01151c,
+            #000000
+          );
+          box-shadow: 0 4px 15px 0 rgba(195, 197, 200, 0.75);
+      }
+      
+      .back a:hover {
+        background-image: linear-gradient(
+            to left,
+            #000000,
+            #010f27,
+            #01151c,
+            #000000
+          );
+        background-color: rgb(240, 235, 235);
+        color: #b8b4b4;
+      }
+      
+      @keyframes bn13bouncy {
+        0% {
+          top: 0em;
+        }
+        40% {
+          top: 0em;
+        }
+        43% {
+          top: -0.9em;
+        }
+        46% {
+          top: 0em;
+        }
+        48% {
+          top: -0.4em;
+        }
+        50% {
+          top: 0em;
+        }
+        100% {
+          top: 0em;
+        }
+      }
+    </style>
+</body>
+</html>
